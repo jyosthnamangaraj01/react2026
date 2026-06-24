@@ -1,35 +1,11 @@
-import React,{useState}from 'react'
+import Counter from "./components/Counter";
 
-const App = () => {
-  const [count, setCount] = useState(0);
-  // let count = 0;
-
-function increase(){
-  // count + 1;
-  // count++;
-  // setCount(count + 1);
-  setCount((prev)=> prev+1);
-  console.log(count);
-}
-function decrease(){
-  setCount((prev)=> prev-1);
-  console.log(count);
-}
-
-function reset(){
-  setCount((prev)=> 0 );
-  console.log(count);
-
-}
+function App() {
   return (
-    <div>
-      <h1>React State</h1>
-      <h2>Count Value : {count}</h2>
-      <button onClick={increase}>Increase</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={decrease}>Decrease</button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 flex items-center justify-center p-4">
+      <Counter />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
